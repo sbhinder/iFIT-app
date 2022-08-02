@@ -1,0 +1,45 @@
+ CREATE TABLE iFIT (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT,
+    workout_type TEXT,
+    duration_minutes INTEGER, 
+    calories INTEGER);
+
+INSERT INTO iFIT  (name, workout_type, duration_minutes, calories) VALUES ("Penny", "walking", 45, 300);
+INSERT INTO iFIT (name, workout_type, duration_minutes, calories) VALUES ("Dixie", "jogging", 20, 150); 
+INSERT INTO iFIT (name, workout_type, duration_minutes, calories) VALUES ("Sona", "running", 25, 360);
+INSERT INTO iFIT (name, workout_type, duration_minutes, calories) VALUES ("Lucy", "walking", 30, 250);
+INSERT INTO iFIT (name, workout_type, duration_minutes, calories) VALUES ("Charlie", "running", 30, 500);
+
+Select * from iFIT;
+
+ALTER TABLE iFIT add total_workouts integer; 
+
+
+UPDATE iFIT set total_workouts = 15
+where id = 1; 
+UPDATE iFIT set total_workouts = 45 
+where id = 2; 
+UPDATE iFIT set total_workouts = 23 
+where id = 3;
+UPDATE iFIT set total_workouts = 56 
+where id = 4; 
+UPDATE iFIT set total_workouts = 70 
+where id = 5; 
+
+
+UPDATE iFIT set name = "Charley" 
+where id = 5; 
+
+
+INSERT into iFIT (name, workout_type, duration_minutes, calories, total_workouts) VALUES ("Sterling", "walking", 60, 400, 64); 
+INSERT into iFIT (name, workout_type, duration_minutes, calories, total_workouts) VALUES ("Sashi", "jogging", 20, 165, 33); 
+
+Select * from iFIT; 
+
+DELETE from iFIT where id = 6;
+
+UPDATE iFIT set calories = "200"
+where id = 4; 
+
+Select * from iFIT;
